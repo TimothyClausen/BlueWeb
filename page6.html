@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Link to your external stylesheet -->
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #d4af37; /* Golden metallic color */
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Add a futuristic animation to the header */
+        @keyframes fireworks {
+            0%, 100% {
+                opacity: 0;
+            }
+            5%, 95% {
+                opacity: 1;
+            }
+        }
+
+        .fireworks {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .firework {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, #ff9900, transparent); /* Firework color */
+            animation: fireworks 2s linear infinite;
+            transform-origin: center bottom;
+        }
+
+        /* Logo styles */
+        .logo {
+            display: block;
+            width: 100px; /* Adjust the size as needed */
+            margin: 0 auto; /* Center the logo horizontally */
+        }
+
+        /* Navigation styles */
+        nav ul {
+            list-style: none;
+            background-color: #d4af37; /* Golden metallic color */
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Main content styles */
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 800px; /* Set a maximum width for better readability */
+            margin: 0 auto; /* Center the container horizontally */
+        }
+
+        .container h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #d4af37; /* Golden metallic color */
+            margin-bottom: 15px;
+        }
+
+        .container h2 {
+            font-size: 28px; /* Adjust font size for heading 2 */
+            font-weight: bold;
+            color: #d4af37; /* Golden metallic color */
+            margin-bottom: 15px;
+        }
+
+        .container p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* Donations bar styles */
+        .donations-bar {
+            background-color: #d4af37; /* Golden metallic color */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .donations-counter {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #d4af37; /* Golden metallic color */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        /* Make links bold */
+        a {
+            font-weight: bold;
+        }
+
+        /* Popup styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Link to your external stylesheet -->
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 32px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        /* Navigation styles */
+        nav ul {
+            list-style: none;
+            background-color: #3498db;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Main content styles */
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 800px; /* Set a maximum width for better readability */
+            margin: 0 auto; /* Center the container horizontally */
+        }
+
+        .container h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        .container h2 {
+            font-size: 28px; /* Adjust font size for heading 2 */
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        .container p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        /* Make links bold */
+        a {
+            font-weight: bold;
+        }
+    </style>
+    <title>Page 2</title>
+</head>
+<body>
+    <header>
+        <h1>BlueWeb - The Dark School Hub</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            
+            <li><a href="page8.html">Incoming Games</a></li>
+            <li><a href="page9.html">How To <b>Support</b> The <i>Goal</i></a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <h1><i>The Mission</i></h1>
+            <h2>Our Commitment</h2>
+            <p>As the proprietor and lead developer of BlueWeb, our immediate objective is to provide an effective solution for accessing blocked websites, all while ensuring a seamless and ad-free user experience.</p>
+            <p>Our aim is to spare users the inconvenience of sifting through numerous ads or navigating complex browser settings in search of unblocked content.</p>
+            <h2>What's Ahead</h2>
+            <p>Currently, BlueWeb has transitioned out of its beta phase and is embarking on significant updates, including versions 1.3, 1.4.1, and 1.5. These updates will transform BlueWeb into a fully functional application that can be effortlessly transferred via a simple zip file, guaranteeing unrestricted access from anywhere without fear of censorship or blockage.</p>
+            <p>Furthermore, we are in the process of implementing a user login and registration system, enabling our users to accumulate BlueCoins. These BlueCoins can be used for gaming and casino activities, with the option to convert them into real currency. To support this endeavor, we plan to explore sponsorship opportunities and other avenues for generating revenue, as outlined in the "How Can You Help" section.</p>
+            <h2>Our Long-term Vision</h2>
+            <p>In the long term, our aspiration is to create the world's first website that prioritizes user privacy by not tracking their activities and maintaining a zero-history approach. While we acknowledge that achieving this goal may be a lengthy process, we firmly believe that incremental efforts today will yield significant results in the future. As I still have two years of high school ahead of me, I am committed to having BlueWeb fully polished and operational by Thanksgiving of this year.</p>
+            <h2>Join Us</h2>
+            <p>We invite you to explore the "How Can You Help" section for more information on how you can contribute to our mission. As always, we extend our heartfelt gratitude for choosing BlueWeb.</p>
+            <p>Sincerely,</p>
+            <p>Timothy Clausen</p>
+            <p>Owner of BlueWeb</p>
+        </div>
+    </div>
+    <footer>
+       &copy; <li><a href="page9.html">2023 BlueWeb</a></li>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,109 @@
+/* Add more styles for dark-themed and animated elements */
+/* Update body and header styles */
+body {
+    background-color: #1a1a1a; /* Dark background color */
+    color: #fff; /* Light text color */
+    font-family: 'Your Custom Font', Arial, sans-serif; /* Custom font */
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+}
+
+header {
+    background: linear-gradient(to right, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+}
+
+header:hover {
+    background-color: #e1306c; /* Change background color on hover */
+    transform: scale(1.05); /* Scale up the element on hover for an animation */
+}
+
+/* Update navigation link styles */
+nav a {
+    background: linear-gradient(to right, #007bff, #0056b3); /* Gradient background */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: linear-gradient(to right, #0056b3, #003c80); /* Change gradient on hover */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow on hover */
+    transform: scale(1.05); /* Scale up the element on hover for an animation */
+}
+
+/* Style navigation links with boxes */
+nav ul li {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s; /* Add transform transition */
+    margin-bottom: 10px;
+}
+
+/* On hover, add background color, change text color, and push the link into the screen */
+nav ul li:hover {
+    background-color: #f0f0f0;
+    color: #007bff;
+    transform: translate(2px, 2px); /* Move the link 2px down and 2px to the right */
+}
+
+/* Style the link text within the boxes */
+nav ul li a {
+    flex: 1;
+    padding: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s; /* Add a subtle transform animation */
+}
+
+/* Style all links with a box-like appearance */
+a {
+    display: inline-block;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* On hover, add background color and a slight transformation */
+a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Scale up the element on hover for an animation */
+}
+
+/* Add animations to elements */
+/* Fade in elements */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Add hover effects on interactive elements */
+.interactive-element:hover {
+    /* Add your hover styles here */
+    transform: scale(1.05); /* Scale up the element on hover for an animation */
+}
+
+/* Customize fonts for specific elements */
+.custom-font {
+    font-family: 'Your Custom Font', Arial, sans-serif;
+}

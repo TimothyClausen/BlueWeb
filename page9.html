@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Link to your external stylesheet -->
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #d4af37; /* Golden metallic color */
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Add a futuristic animation to the header */
+        @keyframes fireworks {
+            0%, 100% {
+                opacity: 0;
+            }
+            5%, 95% {
+                opacity: 1;
+            }
+        }
+
+        .fireworks {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .firework {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, #ff9900, transparent); /* Firework color */
+            animation: fireworks 2s linear infinite;
+            transform-origin: center bottom;
+        }
+
+        /* Logo styles */
+        .logo {
+            display: block;
+            width: 100px; /* Adjust the size as needed */
+            margin: 0 auto; /* Center the logo horizontally */
+        }
+
+        /* Navigation styles */
+        nav ul {
+            list-style: none;
+            background-color: #d4af37; /* Golden metallic color */
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Main content styles */
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 800px; /* Set a maximum width for better readability */
+            margin: 0 auto; /* Center the container horizontally */
+        }
+
+        .container h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #d4af37; /* Golden metallic color */
+            margin-bottom: 15px;
+        }
+
+        .container h2 {
+            font-size: 28px; /* Adjust font size for heading 2 */
+            font-weight: bold;
+            color: #d4af37; /* Golden metallic color */
+            margin-bottom: 15px;
+        }
+
+        .container p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* Donations bar styles */
+        .donations-bar {
+            background-color: #d4af37; /* Golden metallic color */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .donations-counter {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #d4af37; /* Golden metallic color */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        /* Make links bold */
+        a {
+            font-weight: bold;
+        }
+
+        /* Popup styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Link to your external stylesheet -->
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 32px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        /* Navigation styles */
+        nav ul {
+            list-style: none;
+            background-color: #3498db;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Main content styles */
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 800px; /* Set a maximum width for better readability */
+            margin: 0 auto; /* Center the container horizontally */
+        }
+
+        .container h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        .container h2 {
+            font-size: 28px; /* Adjust font size for heading 2 */
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        .container p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        /* Make links bold */
+        a {
+            font-weight: bold;
+        }
+    </style>
+    <title>Page 2</title>
+</head>
+<body>
+    <header>
+        <h1>BlueWeb - The Dark School Hub</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            
+            <li><a href="page8.html">Incoming Games</a></li>
+            <li><a href="page9.html">How To <b>Support</b> The <i>Goal</i></a></li>
+        </ul>
+    </nav>
+<div class="container">
+    <h1><i>How Can You Help</i></h1>
+    <div class="content">
+        <p>
+            Thank you for taking the time to visit this link. While it may not appear to be the most prominent link, it holds a vital role in the journey of BlueWeb's production. As BlueWeb advances, we anticipate encountering various obstacles that require the unwavering support of our users to overcome. There are numerous ways you can contribute to our mission, and rest assured, your efforts will be duly rewarded, particularly if you choose to do so during BlueWeb's initial stages.
+        </p>
+        <p>
+            Here are the ways you can support BlueWeb and the significant impact it will have on the website:
+        </p>
+        <ul>
+            <li>
+                <strong>Donations:</strong> Any contributions made from now until December 29th, 2023, will be permanently recognized as OGs (Original Supporters), with one OG per user.
+            </li>
+            <li>
+                <strong>Tipping (Cycles):</strong>
+                <ul>
+                    <li>
+                        <strong>100 Cycles:</strong> Keeps BlueWeb operational for 10 days (Rewarded with 75 BlueCoins).
+                    </li>
+                    <li>
+                        <strong>500 Cycles:</strong> Boosts BlueWeb for 2-23 days (Rewarded with 670 BlueCoins).
+                    </li>
+                    <li>
+                        <strong>1000 Cycles:</strong> Sustains ongoing updates for 31 days (Rewarded with 6700 BlueCoins).
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>Sponsorships (Done through Tipping Cycles):</strong>
+                <ul>
+                    <li>
+                        A sponsorship can entail an image, text, or pop-up message displayed on the home page for a specified duration.
+                    </li>
+                    <li>
+                        <strong>100 Cycles:</strong> 48-hour sponsorship (Rewarded with 200 BlueCoins).
+                    </li>
+                    <li>
+                        <strong>500 Cycles:</strong> 1-week sponsorship (Rewarded with 500 BlueCoins).
+                    </li>
+                    <li>
+                        <strong>1000 Cycles:</strong> 2-week sponsorship (Rewarded with 1200 BlueCoins).
+                    </li>
+                    <li>
+                        <strong>1000 Cycles (x2):</strong> Pop-Up sponsorship for 5 days (Rewarded with 10,000 BlueCoins).
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            <strong>BlueCoins:</strong> BlueCoins will be integrated once the donation count surpasses 500 cycles. BlueCoins have versatile applications, with the casino being the primary use until the donation count reaches 5000 cycles.
+        </p>
+        <ul>
+            <li>
+                BlueCoins can be used in our fully launched casino in version 1.3 (MAJOR UPDATE!!!).
+            </li>
+            <li>
+                BlueCoins can also be traded on the website within our chatroom.
+            </li>
+            <li>
+                Starting December 1st, BlueCoins will be withdrawable, initially in the form of gift cards, to accommodate users without debit or credit card access, with Cash App as an alternative option.
+            </li>
+        </ul>
+        <p>
+            <strong>BlueCoin Conversion Rate:</strong>
+            <br>
+            Initial rate: 1 BlueCoin = 0.0001
+            <br>
+            Increases by 0.0005 with each donation made.
+            <br>
+            For example, with 50 donations, the BlueCoin value would be 0.25, meaning 6,000 BlueCoins equal $1,500 USD.
+            <br>
+            BlueCoin currency depreciates by 0.00009 every 24 hours without donations, doubling every 52 days.
+        </p>
+        <p>
+            Thank you for choosing BlueWeb as your platform of choice. Your support means the world to us as we work towards our mission.
+        </p>
+        <p>Sincerely,</p>
+        <p>Timothy Clausen</p>
+        <p>Owner of BlueWeb</p>
+    </div>
+</div>
+&copy; <li><a href="page9.html">2023 BlueWeb</a></li>

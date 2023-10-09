@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Link to your external stylesheet -->
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #d4af37; /* Golden metallic color */
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Add a futuristic animation to the header */
+        @keyframes fireworks {
+            0%, 100% {
+                opacity: 0;
+            }
+            5%, 95% {
+                opacity: 1;
+            }
+        }
+
+        .fireworks {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .firework {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, #ff9900, transparent); /* Firework color */
+            animation: fireworks 2s linear infinite;
+            transform-origin: center bottom;
+        }
+
+        /* Logo styles */
+        .logo {
+            display: block;
+            width: 100px; /* Adjust the size as needed */
+            margin: 0 auto; /* Center the logo horizontally */
+        }
+
+        /* Navigation styles */
+        nav ul {
+            list-style: none;
+            background-color: #d4af37; /* Golden metallic color */
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px; /* Increase font size */
+            transition: color 0.3s; /* Add a color transition effect */
+        }
+
+        /* Apply a different color when hovering over links */
+        nav ul li a:hover {
+            color: #c5a345; /* Lighter golden hue */
+        }
+
+        /* Main content styles */
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 800px; /* Set a maximum width for better readability */
+            margin: 0 auto; /* Center the container horizontally */
+        }
+
+        .container h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #d4af37; /* Golden metallic color */
+            margin-bottom: 15px;
+        }
+
+        .container h2 {
+            font-size: 28px; /* Adjust font size for heading 2 */
+            font-weight: bold;
+            color: #d4af37; /* Golden metallic color */
+            margin-bottom: 15px;
+        }
+
+        .container p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* Donations bar styles */
+        .donations-bar {
+            background-color: #d4af37; /* Golden metallic color */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .donations-counter {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #d4af37; /* Golden metallic color */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        /* Make links bold */
+        a {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="fireworks">
+            <!-- Fireworks animation -->
+            <div class="firework" style="animation-delay: 0s;"></div>
+            <div class="firework" style="animation-delay: 1s;"></div>
+            <div class="firework" style="animation-delay: 2s;"></div>
+            <div class="firework" style="animation-delay: 3s;"></div>
+            <div class="firework" style="animation-delay: 4s;"></div>
+        </div>
+        <img src="banner.jpeg" alt="Banner Image" style="width: 100%; max-width: 100%; height: auto;">
+        <img src="iconlogo.png" alt="BlueWeb Logo" class="logo">
+    </header>
+
+    <!-- Donations bar -->
+    <div class="donations-bar">
+        <p>Donations: <span class="donations-counter">2500</span></p>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2>Welcome to BlueWeb</h2>
+            <ul>
+                <li><a href="page6.html"><b>Our Goal</b></a></li>
+                <li><a href="page8.html">Not Ready</a></li>
+                <li><a href="page9.html">How To <b>Support</b> The <i>Goal</i></a></li>
+                <li><a href="https://replit.com/@Ironbrodiet/Inconspicuous-Browser?embed=1&output=1#main.py">Browser Kinda Slow</a></li>
+                <li><a href="page1.html">New Games</a></li>
+                <li><a href="RetroGames.html">Retro Games</a></li>
+                <li><a href="page2.html">Games1.0</a></li>
+                <li><a href="page3.html">Games2.0</a></li>
+                <li><a href="page4.html">Streaming</a></li>
+                <li><a href="BlueWebSlots.html">Slots</a></li>
+                <li><a href="LoginReg.html">Login And Registration</a></li>
+                <li><a href="https://www.voicy.network/official-soundboards/games/e-girl">Funniest Soundboard</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        &copy; <a href="page9.html">2023 BlueWeb</a>
+    </footer>
+</body>
+
+</html>
+
+
+

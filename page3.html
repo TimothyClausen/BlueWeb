@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Link to your external stylesheet -->
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #d4af37; /* Golden metallic color */
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Add a futuristic animation to the header */
+        @keyframes fireworks {
+            0%, 100% {
+                opacity: 0;
+            }
+            5%, 95% {
+                opacity: 1;
+            }
+        }
+
+        .fireworks {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .firework {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, #ff9900, transparent); /* Firework color */
+            animation: fireworks 2s linear infinite;
+            transform-origin: center bottom;
+        }
+
+        /* Logo styles */
+        .logo {
+            display: block;
+            width: 100px; /* Adjust the size as needed */
+            margin: 0 auto; /* Center the logo horizontally */
+        }
+
+        /* Navigation styles */
+        nav ul {
+            list-style: none;
+            background-color: #d4af37; /* Golden metallic color */
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Main content styles */
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 800px; /* Set a maximum width for better readability */
+            margin: 0 auto; /* Center the container horizontally */
+        }
+
+        .container h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #d4af37; /* Golden metallic color */
+            margin-bottom: 15px;
+        }
+
+        .container h2 {
+            font-size: 28px; /* Adjust font size for heading 2 */
+            font-weight: bold;
+            color: #d4af37; /* Golden metallic color */
+            margin-bottom: 15px;
+        }
+
+        .container p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* Donations bar styles */
+        .donations-bar {
+            background-color: #d4af37; /* Golden metallic color */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .donations-counter {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #d4af37; /* Golden metallic color */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        /* Make links bold */
+        a {
+            font-weight: bold;
+        }
+
+        /* Popup styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Link to your external stylesheet -->
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 32px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        /* Navigation styles */
+        nav ul {
+            list-style: none;
+            background-color: #3498db;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Main content styles */
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 800px; /* Set a maximum width for better readability */
+            margin: 0 auto; /* Center the container horizontally */
+        }
+
+        .container h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        .container h2 {
+            font-size: 28px; /* Adjust font size for heading 2 */
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        .container p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        /* Make links bold */
+        a {
+            font-weight: bold;
+        }
+    </style>
+   </head>
+<body>
+    <header>
+        <h1>BlueWeb - The Dark School Hub</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="page1.html">Basic Games</a></li>
+            <li><a href="page2.html">Games2.0</a></li>
+            <li><a href="page3.html">Games3.0</a></li>
+            <li><a href="page4.html">Streaming</a></li>
+           
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <h2>Games 3.0:</h2>
+            <ul>
+                <li><a href="https://cooleoooo662.github.io/3kh0-for-wm.github.io/projects/soundboard/index.html">Soundboard</a> - Play sounds.</li>
+                <li><a href="https://cooleoooo662.github.io/3kh0-for-wm.github.io/projects/idle-breakout/index.html">Idle Breakout</a> - Breakout idle game.</li>
+                <li><a href="https://cooleoooo662.github.io/3kh0-for-wm.github.io/projects/idle-shark/index.html">Idle Shark</a> - Shark-themed idle game.</li>
+                <li><a href="https://cooleoooo662.github.io/3kh0-for-wm.github.io/projects/impossiblequiz/index.html">The Impossible Quiz</a> - Test your wits.</li>
+                <li><a href="https://cooleoooo662.github.io/3kh0-for-wm.github.io/projects/adarkroom/index.html">A Dark Room</a> - Text-based adventure.</li>
+                <li><a href="https://cooleoooo662.github.io/3kh0-for-wm.github.io/projects/bitlife/index.html">BitLife</a> - Life simulation game.</li>
+                <li><a href="https://cooleoooo662.github.io/3kh0-for-wm.github.io/projects/bloonstd/index.html">Bloons TD</a> - Tower defense fun.</li>
+                <li><a href="https://cooleeeeeeeeeeeeeoooo662.github.io/3kh0-for-wm.github.io/projects/bloonstd2/index.html">Bloons Td 2/a> - Copy And Paste link for it to work.</li>
+                <li><a href="https://octokatherine.github.io/word-master/">Wordle</a> - Word puzzle game.</li>
+                <li><a href="https://infinitemac.org/1996/System%207.5.3">Word Master</a> - Another word game.</li>
+                <li><a href="https://dorukyum.github.io/FNAF-Web/">FNAF Web</a> - Five Nights at Freddy's online.</li>
+                <li><a href="https://the-house.arturkot.pl/">The House</a> - Horror adventure game.</li>
+                <li><a href="https://cdn2.hubspot.net/hubfs/5338309/Playables/Paperio3d/ad.html">Paper.io 3D</a> - 3D paper game.</li>
+                <li><a href="https://gamehelp16.github.io/thegoldfactory/">The Gold Factory</a> - Factory management game.</li>
+                <li><a href="https://gamehelp16.github.io/chickens/">Blocked</a> - Simulate a chicken's life.</li>
+                <li><a href="https://gamehelp16.github.io/world-warper-ld30/">World Warper</a> - Warping adventure.</li>
+                <li><a href="https://gamehelp16.github.io/the-unconventional-weapon/">The Unconventional Weapon</a> - Unconventional challenges.</li>
+                <li><a href="https://gamehelp16.github.io/material-warrior/">Material Warrior</a> - Become a warrior.</li>
+                <li><a href="http://www.geo-fs.com">Flight Simulator</a> - Fly high.</li>
+                <li><a href="https://cubefield.stackblitz.io/">Cube Field</a> - Navigate through cubes.</li>
+                <li><a href="https://or321.github.io/choppy-orc-autosplitter/">Choppy Orc AutoSplitter</a> - Orc adventures.</li>
+                <li><a href="https://play.cluster.ws/play/house-of-hazards/">House of Hazards</a> - Hazardous fun.</li>
+                <li><a href="https://www.coolmathgames.com/1-popular-games">Cool Math Games</a> - Math and fun combined.</li>
+                <li><a href="https://math-study.github.io/gba/">Gba Games Games</a> - Classic games.</li>
+                <li><a href="https://sites.google.com/view/universalunblocking/gxmes/singleplayer/among-us">Universal Unblocking Games</a> - Doesnt work </li>
+                <li><a href="https://sites.google.com/site/classroom6x/full-list">More Games</a> (Has more games) - Even more games to play.</li>
+                <li><a href="https://ssaaaaaaass-coderlo1212.vercel.app/">More Games</a> (Has More Games) - Explore a variety of games.</li>
+                <li><a href="https://adventale.net/">More Games</a> (Has More Games) - Additional gaming options.</li>
+                <li><a href="https://www.mathsisfun.com/">More Games</a> (MORE??!?!) - Math-themed games.</li>
+                <li><a href="https://sites.google.com/view/bypass-central/home">Random Stuff</a> - Discover random content.</li>
+                <li><a href="https://sites.google.com/view/burritoedition/home">More Games</a> - More gaming choices.</li>
+                <li><a href="https://igroutka.su/">More Games 1.0</a> - A variety of games to play.</li>
+                <li><a href="https://sites.google.com/stu.palmbeachschools.org/mathlearningcenter/home">More Games 1.1</a> - Explore more games.</li>
+                <li><a href="https://sites.google.com/view/artclass-site/home">Vine Boom</a> - Boom with Vine.</li>
+                <li><a href="https://sites.google.com/view/noah-hub/home">More Games 1.2</a> - Yet more games to enjoy.</li>
+                <li><a href="https://pellarsites.github.io/index.html">More Games 1.3</a> - Even more gaming fun.</li>
+                <li><a href="https://oddgames.vercel.app/">More Games 1.4</a> - Explore additional games.</li>
+                <li><a href="https://cooleoooo662.github.io/3kh0-for-wm.github.io/projects.htmlGamxs">More Games 1.5</a> - Diverse gaming options.</li>
+                <li><a href="https://chiboga.github.io/chilibowlflash/">More Games 1.5</a> - Play more games.</li>
+                <li><a href="https://jackrugile.com/radius-raid/">More Games 1.6</a> - Raid with Radius.</li>
+                <li><a href="https://www.culinaryschools.org/kids-games/">More Games 1.7</a> - Culinary gaming.</li>
+                <li><a href="https://wtool.org/adarkroom/">A Dark Room</a> - Another adventure in the dark.</li>
+                <li><a href="https://www.bitnations.co/">BitNations</a> - Explore BitNations.</li>
+                <li><a href="https://jackrugile.com/mono-move/">Mono Move</a> - Move with Mono.</li>
+                <li><a href="https://oskarstalberg.com/Townscaper/#Iz5OTEQ_dIvon2Ptd-OkX0T76pt73hsL6pd9cwR6sd-OkdRPtfCAAAtEAAoJBAAtNBAoRaVVVV1wNHp9cwGp9k0B">Townscaper</a> - Build a town.</li>
+                <li><a href="https://danielyxie.github.io/bitburner/">Bitburner V2.3.2</a> - More Bitburner.</li>
+                <li><a href="https://bitburner-official.github.io/">Bitburner Alternative Updated Version</a> - Another version of Bitburner.</li>
+                <li><a href="https://cascadiagame.github.io/">Cascadia</a> - Explore Cascadia.</li>
+                <li><a href="https://octokatherine.github.io/word-master/">Word Master</a> - Become a word master.</li>
+                <li><a href="https://fnafunblocked.github.io/">FNAF UBLK</a> - Unblocked FNAF.</li>
+                <li><a href="https://sites.google.com/stu.palmbeachschools.org/homework-help-paper/g-a-m-e-s">darkness’s Games</a> - Explore darkness's games.</li>
+                <li><a href="https://sites.google.com/tbg95.com/unblocked911">Unblocked 911</a> - Unblock games with 911.</li>
+                <li><a href="https://sites.google.com/view/fxyre/fnaf">More Games 1.8</a> - Discover even more games.</li>
+                <li><a href="https://www.geoguessr.com/r">GeoGuessr</a> - Guess locations.</li>
+                <li><a href="https://sites.google.com/view/ezclasswork/">More Games 1.9</a> - Even more gaming fun awaits.</li>
+            <li><a href="https://cyber-simulator.com/">Hacker Typer</a> - Act Like A Hacker</li>
+                <li><a 
+            </ul>
+        </div>
+    </div>
+    <footer>
+       &copy; <li><a href="page9.html">2023 BlueWeb</a></li>
+    </footer>
+</body>
+</html>

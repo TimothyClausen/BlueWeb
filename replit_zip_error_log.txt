@@ -1,0 +1,4 @@
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file myenv/bin/python","time":"2023-10-09T13:43:25Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file myenv/bin/python3","time":"2023-10-09T13:43:25Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file myenv/bin/python3.9","time":"2023-10-09T13:43:25Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file myenv/lib64","time":"2023-10-09T13:43:27Z"}
